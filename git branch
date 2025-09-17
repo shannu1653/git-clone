@@ -1,0 +1,61 @@
+Step-by-step: Create branches using Git
+
+Nice — I’ll give a clear, simple, step-by-step process you can follow. Each step has the exact commands. Use whichever shell/terminal you prefer (Terminal, PowerShell, Git Bash).
+
+1. Make sure your local repo is up to date
+
+Open terminal in your repo folder.
+
+Fetch remote updates:
+
+git fetch origin
+
+
+Switch to main (or the branch you want to branch from):
+
+git switch main
+# or: git checkout main
+
+
+Pull the latest changes:
+
+git pull origin main
+
+2. Create a new branch and switch to it
+
+Create and switch in one command (recommended):
+
+git switch -c feature/my-feature
+
+
+Alternative older command:
+
+git checkout -b feature/my-feature
+
+
+feature/my-feature is the branch name. Use a descriptive name like feature/login-form or fix/navbar-bug.
+
+3. Work on your changes
+
+Edit files as needed.
+
+Stage your changes:
+
+git add .
+# or add specific files: git add src/app.js
+
+
+Commit with a message:
+
+git commit -m "feat: add login form layout"
+
+4. Push the branch to GitHub and set upstream
+
+Push and set the branch to track the remote:
+
+git push -u origin feature/my-feature
+
+
+After this, future pushes can use:
+
+git push
